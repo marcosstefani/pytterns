@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytterns"
+version = "0.1.0"
+description = "A simple strategy pattern implementation in Python"
+authors = [{name = "Seu Nome", email = "seuemail@example.com"}]
+license = {text = "MIT"}
+dependencies = []
+
+[tool.setuptools]
+packages = ["pytterns", "pytterns.core"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
