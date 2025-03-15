@@ -5,8 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pytterns"
 version = "0.1.0"
-description = "A simple strategy pattern implementation in Python"
-authors = [{name = "Seu Nome", email = "seuemail@example.com"}]
+description = "A library to easily use design patterns with Python"
+authors = [{name = "Seu Nome", email = "marcos.cantor@gmail.com"}]
 license = {text = "MIT"}
 dependencies = []
 
