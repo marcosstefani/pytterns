@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "pytterns"
 version = "0.1.0"
 description = "A library to easily use design patterns with Python"
-authors = [{name = "Seu Nome", email = "marcos.cantor@gmail.com"}]
+authors = [{name = "Marcos Rosa", email = "marcos.cantor@gmail.com"}]
 license = {text = "MIT"}
 dependencies = []
 
