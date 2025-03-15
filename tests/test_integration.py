@@ -1,5 +1,5 @@
 import pytest
-from pytterns import strategy, load
+from pytterns import strategy, chain, load
 
 @strategy("integration_test")
 class IntegrationStrategyA:

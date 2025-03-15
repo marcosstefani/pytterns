@@ -1,6 +1,10 @@
-from pytterns.core.loaders import StrategyLoader
+from pytterns.core.loaders import StrategyLoader, ChainLoader
 
 class load:
     @staticmethod
-    def strategy(category):
-        return StrategyLoader(category)
+    def strategy(grouper):
+        return StrategyLoader(grouper)
+    
+    @staticmethod
+    def chain(grouper):
+        return ChainLoader(grouper)

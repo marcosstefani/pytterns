@@ -1,5 +1,5 @@
 import inspect
-from pytterns.core.decorators import STRATEGIES
+from pytterns.core.decorators import STRATEGIES, CHAINS
 
 class StrategyLoader:
     def __init__(self, name):
@@ -21,3 +21,19 @@ class StrategyLoader:
                         return strategy
             raise ValueError(f"No strategy in '{self.name}' passed the '{filter_method}' filter")
         return filter_strategy
+
+class ChainLoader:
+    def __init__(self, name):
+        self.name = name
+        if name not in CHAINS:
+            raise ValueError(f"No chain found for: {name}")
+        # Gets the already ordered handlers
+        self.handlers = [handler for _, handler in CHAINS[name]]
+
+    def handle(self, *args, **kwargs):
+        for handler in self.handlers:
+            method = getattr(handler, "handle", None)
+            if callable(method):
+                method(*args, **kwargs)
+            else:
+                raise TypeError(f"Class '{handler.__class__.__name__}' does not have the 'handle' method.")
