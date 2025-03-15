@@ -6,6 +6,8 @@ from pytterns.core.decorators import strategy
 class StrategyX:
     def check(self, value):
         return value == "X"
+    def run(self):
+        return "StrategyX"
 
 def test_load_strategy():
     strategy_instance = load.strategy("group_2").check("X")
@@ -13,4 +15,4 @@ def test_load_strategy():
 
 def test_load_strategy_not_found():
     with pytest.raises(ValueError, match="No strategy in 'group_2' passed the 'check' filter"):
-        load.strategy("group_2").check("Y")
+        load.strategy("group_2").check("Y").run()

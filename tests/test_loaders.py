@@ -6,11 +6,15 @@ from pytterns.core.decorators import strategy, STRATEGIES
 class StrategyA:
     def check(self, value):
         return value == "A"
+    def run(self):
+        return "StrategyA"
 
 @strategy("group_1")
 class StrategyB:
     def check(self, value):
         return value == "B"
+    def run(self):
+        return "StrategyB"
 
 def test_strategy_loader_found():
     loader = StrategyLoader("group_1")
