@@ -1,6 +1,12 @@
 # Pytterns
 Pytterns is a Python library that provides an easy and intuitive way to use Design Patterns in your Python code.
 
+## Installation
+To install Pytterns, use the following command:
+```
+pip install pytterns
+```
+
 ## Implemented Design Patterns
 
 ### Strategy
